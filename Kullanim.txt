@@ -1,0 +1,34 @@
+SAP TRANSPORT YOLLARI — EXPORT / IMPORT
+
+SAP-Transport-Yollari.exe dosyasını çift tıklayarak açın.
+Kurulum gerekmez. Windows ve .NET Framework 4.x gerekir.
+
+Sol bölüm Export, sağ bölüm Import yollarını oluşturur.
+Soldaki transport numarası her iki bölüm için ortaktır.
+KHDK978324, K978324 veya 978324 biçimlerini kullanabilirsiniz.
+
+Varsayılan Export klasörü: \\KZCS4PPD\sapmnt\trans
+Varsayılan Import klasörü: \\KZCKHXAPP\sapmnt\trans
+İki ana klasörü birbirinden bağımsız değiştirebilirsiniz.
+Her bölümdeki Varsayılan düğmesi o bölümün başlangıç yolunu geri getirir.
+Klasörler uygulama yeniden açıldığında varsayılan değerlerine döner.
+
+978324 için Export çıktıları:
+  \\KZCS4PPD\sapmnt\trans\cofiles\K978324.KHD
+  \\KZCS4PPD\sapmnt\trans\data\R978324.KHD
+
+978324 için Import çıktıları:
+  \\KZCKHXAPP\sapmnt\trans\cofiles\K978324.KHD
+  \\KZCKHXAPP\sapmnt\trans\data\R978324.KHD
+
+Kopyala: Yanındaki yolu panoya kopyalar.
+İkisini kopyala: Bulunduğu bölümün iki yolunu ayrı satırlar halinde kopyalar.
+Girdi ve klasörler değiştiğinde yollar otomatik güncellenir.
+Geçersiz girdilerde eski sonuçlar temizlenir ve kopyalama kapatılır.
+
+Numara tam 6 rakam olmalıdır. Başındaki sıfırlar korunur.
+KHD sistem uzantısı her iki tarafta sabittir. Küçük harfler de kabul edilir.
+Uygulama yalnızca yol metinleri üretir; dosya aktarımı yapmaz.
+
+Kaynak kod: kaynak\TransportYollari.cs
+Yeniden derlemek için: powershell -ExecutionPolicy Bypass -File .\kaynak\derle.ps1

@@ -1,0 +1,6 @@
+/work/
+*.pdb
+*.user
+.vs/
+Thumbs.db
+Desktop.ini
